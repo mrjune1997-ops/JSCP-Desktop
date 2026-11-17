@@ -1,0 +1,54 @@
+# ---------- 依赖 ----------
+node_modules/
+.pnp
+.pnp.js
+
+# ---------- 构建产物 ----------
+out/
+build-out/
+release/
+release-*/
+dist/
+dist-e2e*/
+.pack-stage-*/
+.probe-dir*/
+
+# ---------- 日志与临时文件 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# ---------- 编辑器 / IDE ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.iml
+
+# ---------- 环境变量与密钥 ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# ---------- 测试与调试输出 ----------
+_capture/
+_audit*/
+_verify*/
+_e2e*/
+coverage/
+*.snap.log
+
+# ---------- 本工具目录（项目内部数据，不入库） ----------
+.workbuddy/

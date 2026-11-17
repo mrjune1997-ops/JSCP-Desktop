@@ -1,0 +1,61 @@
+{
+  "appId": "cn.jscp.calculator",
+  "productName": "JSCP",
+  "copyright": "Copyright © 2026 JSCP",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "asar": true,
+  "compression": "maximum",
+  "electronLanguages": ["zh-CN", "en-US"],
+  "files": [
+    "out/**/*",
+    "package.json",
+    "!**/node_modules/**/{test,__tests__,tests,powered-test,example,examples,doc,docs}/**",
+    "!**/node_modules/**/*.{md,markdown,map,ts,tsx,flow,coffee}",
+    "!**/node_modules/**/{.eslintrc,.editorconfig,.prettierrc,.babelrc,.npmignore,.travis.yml}",
+    "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+    "!.editorconfig",
+    "!**/._*",
+    "!**/{.DS_Store,.git,.gitignore,.gitattributes,.github,.svn,.hg}",
+    "!**/release/**",
+    "!**/tests/**",
+    "!**/_capture/**",
+    "!**/_audit*/**"
+  ],
+  "extraResources": [
+    {
+      "from": "resources",
+      "to": "icons",
+      "filter": ["**/*"]
+    }
+  ],
+  "win": {
+    "target": [
+      { "target": "nsis", "arch": ["x64"] },
+      { "target": "portable", "arch": ["x64"] }
+    ],
+    "icon": "build/icon.ico",
+    "artifactName": "JSCP-${version}-${arch}.${ext}",
+    "forceCodeSigning": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "JSCP",
+    "deleteAppDataOnUninstall": false,
+    "installerIcon": "build/icon.ico",
+    "uninstallerIcon": "build/icon.ico",
+    "differentialPackage": false,
+    "language": "2052",
+    "installerLanguages": ["zh_CN"],
+    "multiLanguageInstaller": false
+  },
+  "portable": {
+    "artifactName": "JSCP-${version}-portable.${ext}"
+  }
+}
