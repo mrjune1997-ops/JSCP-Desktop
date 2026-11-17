@@ -1,0 +1,72 @@
+name: Bug 反馈
+description: 报告 JSCP 的缺陷或异常表现
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量把信息填全，能大幅缩短定位时间。
+
+  - type: input
+    id: version
+    attributes:
+      label: JSCP 版本号
+      description: 主界面底栏右下角，或窗口标题
+      placeholder: v1.0.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 出问题的模块
+      options:
+        - 科学计算
+        - 汇率换算
+        - 外贸计算
+        - 单位换算 / 百分比
+        - 时差时钟
+        - 界面 / 主题 / 缩放
+        - 托盘 / 窗口
+        - 打包 / 安装
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 进入汇率换算页
+        2. 点击一键更新
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Windows 版本
+      placeholder: Windows 11 23H2 / Windows 10 22H2
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截图或补充信息
+      description: 界面问题建议带截图；汇率问题请说明当时的牌价页面
