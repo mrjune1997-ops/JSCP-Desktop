@@ -2,6 +2,8 @@
 
 一款面向外贸业务的 Windows 桌面计算工具。拟物化 2.5D 界面，十进制运算内核，支持亮暗双主题与界面整体缩放。
 
+![科学计算 · 暗色](docs/screenshots/01-sci-dark.png)
+
 ## 功能模块
 
 | 模块 | 说明 |
@@ -12,7 +14,59 @@
 | **单位换算** | 长度、重量、体积、面积、容量、温度、百分比（涨跌幅 / 占比 / 折扣 / 百分比互转） |
 | **时差时钟** | 最多 4 地，IANA 时区，自动处理夏令时 |
 
+<details>
+<summary><b>展开查看全部界面截图（6 个页面 × 亮暗双主题）</b></summary>
+
+### 汇率换算
+
+一键抓取中行牌价，左侧定基准币种与金额，右侧最多 10 个目标币种各自独立换算。
+
+| 暗色 | 亮色 |
+|---|---|
+| ![汇率换算 · 暗色](docs/screenshots/02-rates-dark.png) | ![汇率换算 · 亮色](docs/screenshots/02-rates-light.png) |
+
+### 外贸计算
+
+CBM 体积、体积重、通用税额、出口退税、进口综合税、货款比例，六个常用公式各占一页。
+
+| 暗色 | 亮色 |
+|---|---|
+| ![外贸计算 · 暗色](docs/screenshots/03-trade-dark.png) | ![外贸计算 · 亮色](docs/screenshots/03-trade-light.png) |
+
+### 单位换算
+
+长度、重量、体积、面积、容量、温度六大类，输入任一单位其余自动换算。
+
+| 暗色 | 亮色 |
+|---|---|
+| ![单位换算 · 暗色](docs/screenshots/04-units-dark.png) | ![单位换算 · 亮色](docs/screenshots/04-units-light.png) |
+
+### 百分比工具
+
+涨跌幅、占比、折扣、百分比互转四种模式，报价与议价时最常用的一页。
+
+| 暗色 | 亮色 |
+|---|---|
+| ![百分比工具 · 暗色](docs/screenshots/05-percent-dark.png) | ![百分比工具 · 亮色](docs/screenshots/05-percent-light.png) |
+
+### 时差时钟
+
+最多 4 个城市，按 IANA 时区自动处理夏令时，跟客户对时间不用再查表。
+
+| 暗色 | 亮色 |
+|---|---|
+| ![时差时钟 · 暗色](docs/screenshots/06-clock-dark.png) | ![时差时钟 · 亮色](docs/screenshots/06-clock-light.png) |
+
+### 科学计算（亮色）
+
+| 亮色 |
+|---|
+| ![科学计算 · 亮色](docs/screenshots/01-sci-light.png) |
+
+</details>
+
 ## 核心特性
+
 
 - **十进制运算内核**：基于 decimal.js（precision 40，ROUND_HALF_UP），`0.1 + 0.2` 精确等于 `0.3`，无浮点误差
 - **12 位有效数字**：超过 `1e12` 或小于 `1e-9` 自动转科学计数法；千分位仅作展示层处理
